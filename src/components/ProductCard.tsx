@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import  { styles } from './ProductCardStyles'
 
 type Product = {
   id: number;
@@ -25,10 +26,5 @@ export default function ProductCard({ product, onPress }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
-  card: { flexDirection: 'row', padding: 10, borderBottomWidth: 1 },
-  image: { width: 80, height: 80 },
-  info: { marginLeft: 10, justifyContent: 'center' },
-  name: { fontWeight: 'bold' }
-});
+
 
