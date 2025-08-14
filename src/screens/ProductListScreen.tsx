@@ -50,12 +50,7 @@ export default function ProductListScreen({ categoryGroup }: { categoryGroup: 'm
 
   return (
     <View style={styles.container}>
-      <Pressable
-        style={styles.backButton}
-        onPress={() => navigation.navigate('Login')}
-      >
-        <Text style={styles.backButtonText}>Voltar</Text>
-      </Pressable>
+
       {/* Subcategorias */}
       <View style={styles.subcategoryContainer}>
         <ScrollView
@@ -86,8 +81,10 @@ export default function ProductListScreen({ categoryGroup }: { categoryGroup: 'm
       </View>
       {/* Lista de Produtos */}
       <FlatList
+        style={{ flex: 1 }}
         data={products}
         keyExtractor={(item) => item.id.toString()}
+        showsVerticalScrollIndicator={true}
         renderItem={({ item }) => (
           <View style={styles.productCard}>
             <Image source={{ uri: item.thumbnail }} style={styles.productImage} />
@@ -110,24 +107,15 @@ export default function ProductListScreen({ categoryGroup }: { categoryGroup: 'm
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#fff' },
-
-  backButton: {
-    backgroundColor: '#0066cc',
-    padding: 10,
-    margin: 10,
-    marginTop:50,
-    borderRadius: 8,
-    alignSelf: 'flex-start',
-  },
-  backButtonText: { fontSize: 14, fontWeight: 'bold', color: 'white' },
   subcategoryContainer: {
-    flex: 1,                // ocupa todo o espaço disponível
-    justifyContent: 'center', // centraliza verticalmente
-    alignItems: 'center',     // centraliza horizontalmente
+    paddingTop: 30,
+    height: 100,                
+    justifyContent: 'center', 
+    alignItems: 'center',     
   },
   subcategoryContent: {
-  alignItems: 'center',     // garante centralização vertical dos botões na rolagem
-  justifyContent: 'center', // garante centralização horizontal
+  alignItems: 'center',     
+  justifyContent: 'center', 
   },
   subcategoryScroll: {
     paddingHorizontal: 10,
@@ -160,7 +148,7 @@ const styles = StyleSheet.create({
 
   productCard: {
     flexDirection: 'row',
-    padding: 10,
+    padding: 20,
     borderBottomWidth: 1,
     borderBottomColor: '#eee',
     alignItems: 'center',

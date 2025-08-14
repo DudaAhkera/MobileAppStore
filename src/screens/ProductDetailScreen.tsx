@@ -55,7 +55,9 @@ export default function ProductDetailScreen() {
             }}
           />
         </View>
-        <Image source={{ uri: product.thumbnail }} style={styles.productImage} />
+          <View style={styles.imageContainer}>
+            <Image source={{ uri: product.thumbnail }} style={styles.productImage} />
+          </View>
         <Text style={styles.title}>{product.title}</Text>
         <Text style={styles.description}>{product.description}</Text>
         <View style={styles.priceContainer}>
@@ -100,9 +102,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#fff',
   },
+  imageContainer: {
+  width: '100%',
+  paddingVertical: 10,  // espaço extra acima e abaixo
+  },
   productImage: {
     width: '100%',
-    height: 200,
+    height: 320,
     borderRadius: 8,
     marginBottom: 16,
   },

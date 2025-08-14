@@ -13,15 +13,22 @@ export default function AppNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} 
+            options={{
+                        title: 'Tela de Login',     
+                        headerTitleAlign: 'center', 
+                        headerBackVisible: false
+                      }}
+        />
         <Stack.Screen name="ProductTabs" component={ProductTabs} 
           options={{ 
-            headerShown: false, 
-            headerTitle: 'Produtos',
+            headerTitle: 'Lista de Produtos',
             headerTitleAlign: 'center',
           }}
         /> 
-        <Stack.Screen name="ProductDetailScreen" component={ProductDetailScreen} options={{ headerTitle: 'Detalhes do Produto' }} />
+        <Stack.Screen name="ProductDetailScreen" component={ProductDetailScreen} 
+          options={{ 
+            headerTitle: 'Detalhes do Produto' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

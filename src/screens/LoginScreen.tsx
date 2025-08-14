@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, Text, StyleSheet, Image, TouchableOpacity, Pressable } from 'react-native';
+import { View, TextInput, Text, StyleSheet, Image, TouchableOpacity, Pressable, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/AppNavigatorTypes';
@@ -35,7 +35,7 @@ export default function LoginScreen() {
         style={styles.logo}
         resizeMode="contain"
       />
-      {/* Título no lugar de "Login" */}
+      {/* Nome do App*/}
       <Text style={styles.title}>MobileOnlineApp</Text>
       <TextInput placeholder="Email" value={email} onChangeText={setEmail} style={styles.input} keyboardType="email-address" autoCapitalize="none" />
       <TextInput placeholder="Senha" value={password} onChangeText={setPassword} secureTextEntry style={styles.input} />
@@ -55,7 +55,13 @@ export default function LoginScreen() {
       </Pressable>
       <Pressable>
         <View style={styles.buttonGroup}>
-        <TouchableOpacity onPress={handleRegister} style={styles.registerButton}>
+        <TouchableOpacity 
+          onPress={() => {
+            Alert.alert(
+              'Cadastro realizado com sucesso',
+              'Boas compras!'
+            );
+      }} style={styles.registerButton}>
           <Text style={styles.registerText}>Cadastrar</Text>
         </TouchableOpacity>
       </View>
@@ -83,7 +89,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 24,
+    marginBottom: 50,
   },
 
   input: {
@@ -100,7 +106,7 @@ const styles = StyleSheet.create({
   },
 
   buttonGroup: {
-    marginTop: 16,
+    marginTop: 50,
   },
 
   button: {
