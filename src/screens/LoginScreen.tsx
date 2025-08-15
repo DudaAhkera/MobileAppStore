@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, Text, StyleSheet, Image, TouchableOpacity, Pressable, Alert } from 'react-native';
+import { View, TextInput, Text, Image, TouchableOpacity, Pressable, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/AppNavigatorTypes';
@@ -24,7 +24,7 @@ export default function LoginScreen() {
   };
 
   const handleRegister = () => {
-    navigation.navigate('Register'); // ajuste o nome da rota caso seja diferente
+    navigation.navigate('Register'); 
   };
 
   return (

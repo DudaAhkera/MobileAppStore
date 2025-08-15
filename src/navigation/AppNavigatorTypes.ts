@@ -1,4 +1,3 @@
-// src/navigation/AppNavigatorTypes.ts
 export type RootStackParamList = {
   Login: undefined;
   ProductTabs: undefined;
