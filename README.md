@@ -29,9 +29,11 @@
 <p align="center"><img src="https://github.com/user-attachments/assets/7caee0f9-ff0e-463b-9212-a9dca9086704" width="300" height="500"></p>
 
 
-<p align="center">## Tecnologias utilizadas no projeto:</p> 
+<h2 align="center"> 
+  Tecnologias utilizadas no projeto: 
+</h2> 
 
-<p align=center>""<img width="878" height="472" alt="image" src="https://github.com/user-attachments/assets/e26f475b-2ee0-47db-ab57-3869afd2c32e" /></p>
+<p align="center"><img width="878" height="472" alt="image" src="https://github.com/user-attachments/assets/e26f475b-2ee0-47db-ab57-3869afd2c32e" /></p>
 
 
 
